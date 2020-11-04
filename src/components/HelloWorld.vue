@@ -1,5 +1,7 @@
 <template>
  hello world vue3
+ <!-- 多事件处理 -->
+ <button @click="$emit('click')">点击</button>
 </template>
 
 <script>
