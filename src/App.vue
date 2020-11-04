@@ -1,19 +1,20 @@
 <template>
-  <HelloWorld @click="modifyMsg(), sayHi()" />
+  <combinedApi />
   <!-- 指令参数 [title] 动态绑定求值 -->
   <div :[title]="val">
     {{ msg }}
   </div>
-  <!-- <button @click="modifyMsg(), sayHi()">点击</button> -->
+  <!-- 多事件处理 -->
+  <button @click="modifyMsg(), sayHi()">点击</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import combinedApi from './components/combinedApi.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    combinedApi,
   },
   data() {
     return {
