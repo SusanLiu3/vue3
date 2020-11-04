@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import combinedApi from './components/combinedApi.vue';
-import setup from './components/setup.vue';
+import combinedApi from './components/combined/combinedApi.vue';
+import setup from './components/combined/setup.vue';
 
 export default {
   name: 'App',
