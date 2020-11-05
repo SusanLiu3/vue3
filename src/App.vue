@@ -8,12 +8,14 @@
   <!-- 多事件处理 -->
   <button @click="modifyMsg(), sayHi()">点击</button>
   <reactive />
+  <reacComputed />
 </template>
 
 <script>
 import combinedApi from './components/combined/combinedApi.vue';
 import setup from './components/combined/setup.vue';
 import reactive from './components/reactive/index.vue';
+import reacComputed from './components/reactive/computed.vue';
 
 export default {
   name: 'App',
@@ -21,6 +23,7 @@ export default {
     combinedApi,
     setup,
     reactive,
+    reacComputed
   },
   data() {
     return {
