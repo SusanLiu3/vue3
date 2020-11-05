@@ -22,10 +22,5 @@ export default {
     });
     return () => h('div', [obj.book, obj.author]); // 返回一个渲染函数
   },
-  mounted() {
-    setTimeout(() => {
-      this.props.title = '响应式?';
-    }, 1500);
-  },
 };
 </script>

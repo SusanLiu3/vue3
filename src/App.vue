@@ -7,17 +7,20 @@
   </div>
   <!-- 多事件处理 -->
   <button @click="modifyMsg(), sayHi()">点击</button>
+  <reactive />
 </template>
 
 <script>
 import combinedApi from './components/combined/combinedApi.vue';
 import setup from './components/combined/setup.vue';
+import reactive from './components/reactive/index.vue';
 
 export default {
   name: 'App',
   components: {
     combinedApi,
     setup,
+    reactive,
   },
   data() {
     return {
