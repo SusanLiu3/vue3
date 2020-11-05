@@ -10,12 +10,14 @@
   <reactive />
   <computed />
   <provide />
+  <temp />
 </template>
 
 <script>
 import combinedApi from './components/combined/combinedApi.vue';
 import setup from './components/combined/setup.vue';
 import provide from './components/combined/provide.vue';
+import temp from './components/combined/template.vue';
 import reactive from './components/reactive/index.vue';
 import computed from './components/reactive/computed.vue';
 export default {
@@ -26,6 +28,7 @@ export default {
     reactive,
     computed,
     provide,
+    temp
   },
   data() {
     return {
