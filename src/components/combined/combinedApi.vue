@@ -1,6 +1,6 @@
 <template>
   <!-- 组合式api--- 同一个逻辑关注点的代码组合到一起 setup 选项 -->
-  <div class="btn-group">
+  <div class="btn-group" id="btnGroup">
     <button @click="modifyVal">修改value</button>
     <span>val:{{ testVal }} obj:{{ testObj.name }} double:{{ doubleVal }}</span>
   </div>
