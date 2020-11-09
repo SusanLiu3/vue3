@@ -6,6 +6,7 @@
   <div :[title]="val" ref="content">
     {{ msg }}
   </div>
+  <button @click="copyToBoard(msg)">复制</button>
   <!-- 多事件处理 -->
   <button @click="modifyMsg(), sayHi()">点击</button>
   <reactive />
@@ -44,7 +45,7 @@ export default {
     temp,
     tele,
     testJsx,
-    render
+    render,
   },
   data() {
     return {
@@ -67,6 +68,24 @@ export default {
     },
     sayHi() {
       console.log('hi');
+    },
+    // 这个方法在支持 document.execCommand('copy')的方法才适用
+    copyToBoard(msg) {
+      // 创建text area
+      let dom = document.createElement('textarea');
+      // 将需要复制的值赋给text area
+      dom.value = msg;
+      // 添加css 防 删除添加时闪烁
+      dom.setAttribute('readonly','');
+      dom.style.position = 'absolute';
+      dom.style.left = '-9999px';
+      document.body.appendChild(dom);
+      // 选中text area的值
+      dom.select();
+      // 复制
+      document.execCommand('copy');
+      // 删除
+      document.body.removeChild(dom);
     },
   },
 };
